@@ -1,0 +1,120 @@
+/* 	--primary: #D3E4CD;
+	--secondary: #99A799;
+	--light: #99A799;
+	--light-alt: #61759b;
+	--dark: #FEF5ED;
+	--dark-alt: #D3E4CD;
+ */
+h1{
+        text-align: center;
+}
+.note{
+	position: relative;
+	background-color: var(--dark);
+	padding: 16px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	transition: 0.5s;
+	cursor: pointer;
+	margin-bottom: 16px;
+    font-size: 2.75rem;
+    color:#646b64;
+}
+
+
+
+.note .delete-button {
+	width: 60px;
+	height: 50px;
+	border-radius: 90%;
+	background-color: var(--dark-alt);
+	background-image: linear-gradient(to bottom, transparent, transparent);
+	transition: 0.4s;
+    position: absolute;
+    right: 0.6rem;
+    background: var(--primary);
+    color: var(--light-alt);
+    font-weight: 400;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+.delete-button:hover {
+	opacity: 0.65;
+}
+
+
+/* .list .checkbox {
+	width: 20px;
+	height: 20px;
+}
+
+.list.is-complete .checkbox {
+	background-color: black;
+	background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+    z-index: 100;
+}
+
+
+.list.is-complete .note {
+	text-decoration: line-through;
+    color: brown;
+    z-index: 100;
+} */
+@media only screen and (max-width: 600px) {
+    h1{
+        text-align: center;
+    }
+    li{
+        right: 1rem;
+    }
+    .note{
+        font-size: 1.5rem;
+        position: relative;
+        background-color: var(--dark);
+        padding: 26px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        cursor: pointer;
+        margin-bottom: 26px;
+        /* padding-right: 4rem; */
+        text-align: left;
+    }
+    .note .delete-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 90%;
+        background-color: var(--dark-alt); 
+        background-image: linear-gradient(to bottom, transparent, transparent);
+        transition: 0.4s;
+        /* position: absolute; */
+        background: var(--primary);
+        color: var(--light-alt);
+        font-weight: 400;
+        font-size: 1rem;
+        /* margin-left: 1rem; */
+        
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .note .delete-button {
+        width: 30px;
+        height: 30px;
+        border-radius: 90%;
+        background-color: var(--dark-alt); 
+        background-image: linear-gradient(to bottom, transparent, transparent);
+        transition: 0.4s;
+        /* position: absolute; */
+        background: var(--primary);
+        color: var(--light-alt);
+        font-weight: 400;
+        font-size: 1rem;
+        /* margin-left: 1rem; */
+        padding-right: 1.5rem;
+    }
+}
