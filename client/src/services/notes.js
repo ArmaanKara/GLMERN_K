@@ -3,8 +3,19 @@ const baseUrl = '/api/notes';
 
 const noteService = () => {
   const getAll = () => {
-    const request = axios.get(baseUrl);
-    return request.then((response) => response.data);
+    return new Promise((res, rej) => {
+      axios
+        .get(baseUrl)
+        .then((response) => {
+          console.log(response);
+          res(response.data);
+        })
+        .catch(() => {
+          rej('failure');
+        });
+      // const request = axios.get(baseUrl);
+      // return request.then((response) => response.data);
+    });
   };
 
   const create = (newObject) => {
